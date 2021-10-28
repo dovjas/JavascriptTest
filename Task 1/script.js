@@ -8,3 +8,19 @@ pamatyti jo pateikto svorio kovertavimą į:
 Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 <div id="output"></div> viduje, bei turi turėti bent minimalų stilių;
 ------------------------------------------------------------------- */
+const form = document.querySelector('form')
+
+form.addEventListener('submit', (event)=>{
+    event.preventDefault();
+
+    const value = document.querySelector('#search').value
+    // console.log(value)
+    const lb = value * 2.2046;
+    const g = value * 0.0010000;
+    const oz = value * 35.274;
+
+    document.getElementById('svaras').textContent= lb;
+    document.getElementById('gramas').textContent= g;
+    document.getElementById('uncija').textContent= oz;
+})
+

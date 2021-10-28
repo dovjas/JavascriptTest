@@ -51,6 +51,17 @@ form {
   background-color: #000;
   color: #fff;
 }
+#output{
+  text-align: center;
+}
+#output p{
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 10px;
+}
+#output span{
+  color: white;
+}
 
 /* Tablet */
 @media screen and (min-width: 768px) {
