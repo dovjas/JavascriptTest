@@ -14,23 +14,26 @@ const ENDPOINT = "https://api.github.com/users";
 
 const output = document.getElementById("output");
 const btn = document.getElementById("btn");
-btn.addEventListener("click", () => {
+btn.addEventListener("click", (e) => {
+  e.preventDefault();
   fetch("https://api.github.com/users")
     .then((res) => res.json())
     .then((data) => {
       output.textContent = "";
 
       data.forEach((user) => {
-        const userEl = document.createElement("div");
+        const userData = document.createElement("div");
         const img = document.createElement("img");
         img.style.height = "50px";
-        img.style.width = "50px";
+        img.style.border = "2px solid red"
+        output.style.fontSize = "15px"
+        
         img.src = user.avatar_url;
-        userEl.append(img);
+        userData.append(img);
         const login = document.createElement("div");
         login.textContent = user.login;
-        userEl.append(login);
-        output.append(userEl);
+        userData.append(login);
+        output.append(userData);
       });
     });
 });

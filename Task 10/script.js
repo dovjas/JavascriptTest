@@ -14,6 +14,7 @@ Jeigu norite, galite naudotis turimu CSS, bet galite pasirašyti ir savo.
 
 const form = document.querySelector('form')
 const error = document.querySelector('.error')
+const table = document.querySelector('table')
 
 form.addEventListener('submit',(e)=>{
     e.preventDefault();
