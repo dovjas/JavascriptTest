@@ -11,22 +11,30 @@ Jeigu įvesta vertė tiko - nusispalvina to skaičiaus langelis lentelėje.
 
 Jeigu norite, galite naudotis turimu CSS, bet galite pasirašyti ir savo. 
 -------------------------------------------------------------------------- */
-
 const form = document.querySelector('form')
-const error = document.querySelector('.error')
-const table = document.querySelector('table')
+
+
 
 form.addEventListener('submit',(e)=>{
-    e.preventDefault();
-    const value = document.getElementById('number').value
-    const error = document.querySelector('.error')
-    console.log(value)
-   
-    if (value > 1 && value < 10){
-        if (value = 1){
-            
-        }else{
-            document.querySelector('.error').style.visibility ='visible'
-        }
+  e.preventDefault();
+  const input = document.querySelector('#number').value
+  const error = document.querySelector('.error') 
+  // console.log(input)
+  
+
+  const table = document.querySelector("table");
+  for (let i = 0; i < table.rows.length; i++) {
+    for (let c = 0; c < table.rows[i].cells.length; c++) {
+      console.log((table.rows[i].cells[c]))
     }
+ 
+
+  }
 })
+
+  // if (input < 1 || input > 9 ) {
+  //  error.style.visibility = "visible"
+  // } 
+
+  
+  // })

@@ -12,3 +12,31 @@ bent minimalų stilių;
 const ENDPOINT = "cars.json";
 
 
+const output = document.querySelector('#output');
+
+fetch ('cars.json')
+    .then((res)=> res.json())
+    .then((data)=>{
+        data.forEach((car)=>{
+            const brandType = document.createElement('div');
+            const brand = document.createElement('h1');
+            
+            brand.style.paddingBottom = '10px';
+            brand.style.textAlign = 'center';
+            brandType.style.paddingLeft = '20px';
+            brandType.style.borderBottom = '3px solid grey';
+            brand.textContent = car.brand;
+           
+            brandType.append(brand);
+
+            const models = document.createElement('h4');
+            models.style.paddingBottom = '15px';
+            models.style.textAlign = 'center';
+
+            models.textContent = car.models;
+           
+            brandType.append(models);
+            output.append(brandType);
+
+        })
+    })
