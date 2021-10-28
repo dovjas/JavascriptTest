@@ -15,6 +15,7 @@ form.addEventListener('submit', (event)=>{
 
     const value = document.querySelector('#search').value
     // console.log(value)
+    
     const lb = value * 2.2046;
     const g = value * 0.0010000;
     const oz = value * 35.274;

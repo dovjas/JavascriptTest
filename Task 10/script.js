@@ -19,22 +19,19 @@ form.addEventListener('submit',(e)=>{
   e.preventDefault();
   const input = document.querySelector('#number').value
   const error = document.querySelector('.error') 
-  // console.log(input)
+
+  console.log(input)
   
+
+  if (input < 1 || input > 9 ) {
+    error.style.visibility = "visible"
+   } 
+ 
 
   const table = document.querySelector("table");
   for (let i = 0; i < table.rows.length; i++) {
     for (let c = 0; c < table.rows[i].cells.length; c++) {
       console.log((table.rows[i].cells[c]))
-    }
+    }}
  
-
-  }
-})
-
-  // if (input < 1 || input > 9 ) {
-  //  error.style.visibility = "visible"
-  // } 
-
-  
-  // })
+  })

@@ -19,19 +19,19 @@ btn.addEventListener("click", (e) => {
   fetch("https://api.github.com/users")
     .then((res) => res.json())
     .then((data) => {
-      output.textContent = "";
+      output.innerHTML = "";
 
       data.forEach((user) => {
         const userData = document.createElement("div");
         const img = document.createElement("img");
         img.style.height = "50px";
-        img.style.border = "2px solid red"
+        img.style.border = "2px solid red";
         output.style.fontSize = "15px"
         
         img.src = user.avatar_url;
         userData.append(img);
         const login = document.createElement("div");
-        login.textContent = user.login;
+        login.innerHTML = user.login;
         userData.append(login);
         output.append(userData);
       });

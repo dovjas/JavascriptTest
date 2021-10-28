@@ -12,6 +12,7 @@ let click = 0;
 btn.addEventListener('click', (event)=>{
     event.preventDefault();
     click++
+    
     // console.log(click)
 
     plus.textContent = click;

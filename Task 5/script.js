@@ -22,13 +22,13 @@ const users = [
 
 
 function filterDogOwers(array) {
-  const filtered = users.filter((array) => array.hasDog)
+  const filtered = users.filter((array) => array.hasDog);
   return filtered
 }
 console.log(filterDogOwers(users))
 
 
 function filterAdults(array){
-  return  users.filter ((array) => array.age > 18)
+  return  users.filter ((array) => array.age > 18);
 }
 console.log(filterAdults(users))
